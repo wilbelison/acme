@@ -3,6 +3,7 @@
 html, body {
 	height: calc(100% - 60px);
 	min-height: calc(100% - 60px);
+	min-width: 320px;
 }
 
 body {
@@ -97,7 +98,7 @@ input:focus {
 
 	display: block;
 	position: relative;
-	padding: 40px;
+	padding: 20px;
 	
 }
 
@@ -133,8 +134,8 @@ input:focus {
 
 	position: absolute;
 
-	right: 64px;
-	top: 52px;
+	right: 30px;
+	top: 30px;
 
 	width: 24px;
 	height: 24px;
@@ -142,6 +143,8 @@ input:focus {
 	text-indent: -999999px;
 
 	border: none;
+
+	background-color: transparent;
 
 	background-image: url('../img/icone_busca.svg');
 	background-position: center;
@@ -155,6 +158,23 @@ input:focus {
 
 	background-image: url('../img/icone_busca_limpar.svg') ;
 	cursor: pointer;
+
+}
+
+@media only screen and (min-width: 480px) {
+
+	#busca {
+
+		padding: 40px;
+	
+	}
+
+	#pesquisar {
+
+		right: 60px;
+		top: 50px;
+
+	}
 
 }
 
@@ -471,7 +491,7 @@ ul {
 
 	padding: 20px;
 
-	height: calc(100% - 60px);
+	height: calc(100% - 40px);
 
 
 	overflow-y: auto;
