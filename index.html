@@ -6,15 +6,13 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="libs/normalize.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
 	<link href="assets/css/acme.css" rel="stylesheet">
 
-	<script src="assets/js/acme.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" onload="init();"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/mustache.min.js"></script>
 
 </head>
 <body>
@@ -25,7 +23,6 @@
 
 		<form id="busca">
 			<input id="query" name="query" type="text" placeholder="Pesquisar..." maxlength="32" />
-			<!-- class="limpar" --->
 			<input id="pesquisar" name="pesquisar" type="button" value="Pesquisar" />
 		</form>
 
@@ -102,6 +99,8 @@
 			</div>
 		{{/.}}
 	</script>
+
+	<script src="assets/js/acme.js"></script>
 
 </body>
 </html>
