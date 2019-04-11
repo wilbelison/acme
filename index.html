@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>ACME - Colaboradores</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+
+	<link href="assets/css/acme.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div id="header"><h1 class="titulo">Colaboradores ACME</h1></div>
+
+	<div class="wrapper">
+
+		<form id="busca">
+			<input id="query" name="query" type="text" placeholder="Pesquisar..." maxlength="32" />
+			<!-- class="limpar" --->
+			<input id="pesquisar" name="pesquisar" type="button" value="Pesquisar" />
+		</form>
+
+		<ul id="colaboradores">
+			<li class="colaborador">
+				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=1');"></div>
+				<ul class="resumo">
+					<li class="nome">Anderson Silva</li>
+					<li class="cargo">Fotografo</li>
+				</ul>
+				<ul class="atalhos">
+					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
+					<li><a href="tel:" class="telefone">Ligar</a></li>
+				</ul>
+			</li>
+			<li class="colaborador">
+				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=2');"></div>
+				<ul class="resumo">
+					<li class="nome">Bruno Costa</li>
+					<li class="cargo">Jornalista</li>
+				</ul>
+				<ul class="atalhos">
+					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
+					<li><a href="tel:" class="telefone">Ligar</a></li>
+				</ul>
+			</li>
+			<li class="colaborador">
+				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=3');"></div>
+				<ul class="resumo">
+					<li class="nome">Wilbelison Junior</li>
+					<li class="cargo">Interaction Designer</li>
+				</ul>
+				<ul class="atalhos">
+					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
+					<li><a href="tel:" class="telefone">Ligar</a></li>
+				</ul>
+			</li>
+			<li class="colaborador">
+				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=4');"></div>
+				<ul class="resumo">
+					<li class="nome">Liliane Souza Rezende</li>
+					<li class="cargo">Diretora de arte</li>
+				</ul>
+				<ul class="atalhos">
+					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
+					<li><a href="tel:" class="telefone">Ligar</a></li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+
+	<div id="detalhes" class="oculto">
+		<div class="overlay">
+
+				<div class="cartao">
+					<div class="header">
+						<a class="voltar" href="javascript:;">Voltar</a>
+						<h2 class="titulo">Wilbelison Junior</h2>
+					</div>
+					<div class="dados">
+						<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=5');"></div>
+						<ul class="resumo">
+							<li class="nome">Wilbelison Junior</li>
+							<li class="cargo">Interaction Designer</li>
+						</ul>
+						<ul class="contatos">
+							<li class="email">
+								<a href="mailto:">
+									<dl>
+										<dt>E-mail</dt>
+										<dd>meustudio@gmail.com</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="telefone">
+								<a href="tel:">
+									<dl>
+										<dt>Telefone</dt>
+										<dd>+55 11 98695 3010</dd>
+									</dl>
+								</a>
+							</li>
+							<li class="endereco">
+								<a href="https://maps.google.com/?q=lat,lng" target="_blank">
+									<dl>
+										<dt>Endereço</dt>
+										<dd>Rua forte do triunfo, 433, Apt 81A<br />08390-240, São Paulo,SP</dd>
+									</dl>
+								</a>
+							</li>
+						</ul>
+						<ul class="atalhos">
+							<li><a href="mailto:" class="email">Enviar mensagem</a></li>
+							<li><a href="tel:" class="telefone">Ligar</a></li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+	<script src="assets/js/acme.js"></script>
+
+</body>
+</html>
