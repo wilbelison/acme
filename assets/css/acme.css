@@ -146,7 +146,7 @@ input:focus {
 
 	background-color: transparent;
 
-	background-image: url('../img/icone_busca.svg');
+	background-image: url('assets/img/icone_busca.svg');
 	background-position: center;
 	background-repeat: no-repeat;
 
@@ -156,7 +156,7 @@ input:focus {
 
 #pesquisar.limpar {
 
-	background-image: url('../img/icone_busca_limpar.svg') ;
+	background-image: url('assets/img/icone_busca_limpar.svg') ;
 	cursor: pointer;
 
 }
@@ -302,13 +302,13 @@ ul {
 
 #colaboradores .atalhos .email {
 
-	background-image: url('../img/icone_atalho_mensagem.svg');
+	background-image: url('assets/img/icone_atalho_mensagem.svg');
 
 }
 
 #colaboradores .atalhos .email:hover {
 
-	background-image: url('../img/icone_atalho_mensagem_hover.svg');
+	background-image: url('assets/img/icone_atalho_mensagem_hover.svg');
 	background-color: #ff8e00;
 
 	-webkit-box-shadow: 0px 3px 10px 0px rgba(255,142,0,0.5);
@@ -319,13 +319,13 @@ ul {
 
 #colaboradores .atalhos .telefone {
 
-	background-image: url('../img/icone_atalho_ligacao.svg');
+	background-image: url('assets/img/icone_atalho_ligacao.svg');
 
 }
 
 #colaboradores .atalhos .telefone:hover {
 
-	background-image: url('../img/icone_atalho_ligacao_hover.svg');
+	background-image: url('assets/img/icone_atalho_ligacao_hover.svg');
 	background-color: #db0064;
 
 	-webkit-box-shadow: 0px 3px 10px 0px rgba(219,0,100,0.5);
@@ -462,7 +462,7 @@ ul {
 
 	text-indent: -999999px;
 
-	background-image: url('../img/icone_header_voltar.svg');
+	background-image: url('assets/img/icone_header_voltar.svg');
 	background-position: center;
 	background-repeat: no-repeat;
 	
@@ -594,20 +594,20 @@ ul {
 
 #detalhes .cartao .dados .contatos .email dt {
 
-	background-image: url('../img/icone_detalhes_mensagem.svg');
+	background-image: url('assets/img/icone_detalhes_mensagem.svg');
 
 }
 
 #detalhes .cartao .dados .contatos .telefone dt {
 
-	background-image: url('../img/icone_detalhes_telefone.svg');
+	background-image: url('assets/img/icone_detalhes_telefone.svg');
 
 }
 
 #detalhes .cartao .dados .contatos .endereco dt {
 
 	height: 28px;
-	background-image: url('../img/icone_detalhes_endereco.svg');
+	background-image: url('assets/img/icone_detalhes_endereco.svg');
 
 }
 
@@ -650,7 +650,7 @@ ul {
 
 	margin-right: 10px;
 
-	background-image: url('../img/icone_atalho_mensagem_hover.svg');
+	background-image: url('assets/img/icone_atalho_mensagem_hover.svg');
 	background-color: #ff8e00;
 
 	-webkit-box-shadow: 0px 3px 10px 0px rgba(255,142,0,0.5);
@@ -663,7 +663,7 @@ ul {
 
 	margin-left: 10px;
 
-	background-image: url('../img/icone_atalho_ligacao_hover.svg');
+	background-image: url('assets/img/icone_atalho_ligacao_hover.svg');
 	background-color: #db0064;
 
 	-webkit-box-shadow: 0px 3px 10px 0px rgba(219,0,100,0.5);
@@ -706,7 +706,7 @@ ul {
 	#detalhes .cartao .header .voltar {
 
 		float: right;
-		background-image: url('../img/icone_header_fechar.svg');
+		background-image: url('assets/img/icone_header_fechar.svg');
 		
 	}
 
