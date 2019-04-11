@@ -1,71 +1,78 @@
-$(document).ready(
-	function(){
+function init() {
 
-		/*---------- MUSTACHE ----------*/
+	$(document).ready(
+		function(){
 
-		var templateColaboradores = $('#template-colaborador').html();
-		var templateDetalhes = $('#template-detalhes').html();
+			/*---------- MUSTACHE ----------*/
 
-		$.getJSON('https://randomuser.me/api/?results=10&nat=br&inc=info,picture,name,email,cell,location', function(data) {
-			
-			var view = data.results.map((e, i) => { return {colaborador: e, index: i} });
+			var templateColaboradores = $('#template-colaborador').html();
+			var templateDetalhes = $('#template-detalhes').html();
 
-			var htmlColaboradores = Mustache.render(templateColaboradores, view);
-			var htmlDetalhes = Mustache.render(templateDetalhes, view);
+			$.getJSON('https://randomuser.me/api/?results=20&nat=br&inc=info,picture,name,email,cell,location&seed=abc', function(data) {
+				
+				var view = data.results.map((e, i) => { return {colaborador: e, index: i} });
 
-			$('#colaboradores').html(htmlColaboradores);
-			$('body').append(htmlDetalhes);
+				var htmlColaboradores = Mustache.render(templateColaboradores, view);
+				var htmlDetalhes = Mustache.render(templateDetalhes, view);
 
-		});
+				$('#colaboradores').html(htmlColaboradores);
+				$('body').append(htmlDetalhes);
 
-		/*---------- PESQUISAR ----------*/
+			});
 
-		$('#pesquisar').on('click', function() {
-			$('#query').focus();
-		});
+			/*---------- PESQUISAR ----------*/
 
-		$('#query').on('input', function() {
+			$('#pesquisar').on('click', function() {
+				$('#query').focus();
+			});
 
-			var value = $(this).val();
+			$('#query').on('input', function() {
 
-			$('#pesquisar').off('click');
+				var value = $(this).val();
 
-			if(value.length >= 1) {
+				$('#pesquisar').off('click');
 
-				$('#pesquisar').addClass('limpar');
+				if(value.length >= 1) {
 
-				$('#pesquisar').on('click', function() {
+					$('#pesquisar').addClass('limpar');
+
+					$('#pesquisar').on('click', function() {
+
+						$('#pesquisar').removeClass('limpar');
+
+						$('#query').val('');
+						$('#query').blur();
+
+						$('#pesquisar').off('click');
+
+						$('#pesquisar').on('click', function() {
+							$('#query').focus();
+						});
+
+					});
+
+				} else {
 
 					$('#pesquisar').removeClass('limpar');
-
-					$('#query').val('');
-					$('#query').blur();
-
-					$('#pesquisar').off('click');
 
 					$('#pesquisar').on('click', function() {
 						$('#query').focus();
 					});
 
-				});
+				}
 
-			} else {
+			});
 
-				$('#pesquisar').removeClass('limpar');
+		}
+	);
 
-				$('#pesquisar').on('click', function() {
-					$('#query').focus();
-				});
+	/* exibe e oculta detalhes */
 
-			}
-
-		});
-
+	detalhes = function(id) {
+		$(id).toggleClass('oculto');
 	}
-);
 
-/* exibe e oculta detalhes */
-
-var detalhes = function(id) {
-	$(id).toggleClass('oculto');
 }
+
+var detalhes;
+
