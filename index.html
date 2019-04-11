@@ -12,6 +12,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
 
+	<script src="assets/js/acme.js"></script>
+
 	<link href="assets/css/acme.css" rel="stylesheet">
 
 </head>
@@ -28,105 +30,78 @@
 		</form>
 
 		<ul id="colaboradores">
-			<li class="colaborador">
-				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=1');"></div>
-				<ul class="resumo">
-					<li class="nome">Anderson Silva</li>
-					<li class="cargo">Fotografo</li>
-				</ul>
-				<ul class="atalhos">
-					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
-					<li><a href="tel:" class="telefone">Ligar</a></li>
-				</ul>
-			</li>
-			<li class="colaborador">
-				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=2');"></div>
-				<ul class="resumo">
-					<li class="nome">Bruno Costa</li>
-					<li class="cargo">Jornalista</li>
-				</ul>
-				<ul class="atalhos">
-					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
-					<li><a href="tel:" class="telefone">Ligar</a></li>
-				</ul>
-			</li>
-			<li class="colaborador">
-				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=3');"></div>
-				<ul class="resumo">
-					<li class="nome">Wilbelison Junior</li>
-					<li class="cargo">Interaction Designer</li>
-				</ul>
-				<ul class="atalhos">
-					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
-					<li><a href="tel:" class="telefone">Ligar</a></li>
-				</ul>
-			</li>
-			<li class="colaborador">
-				<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=4');"></div>
-				<ul class="resumo">
-					<li class="nome">Liliane Souza Rezende</li>
-					<li class="cargo">Diretora de arte</li>
-				</ul>
-				<ul class="atalhos">
-					<li><a href="mailto:" class="email">Enviar mensagem</a></li>
-					<li><a href="tel:" class="telefone">Ligar</a></li>
-				</ul>
-			</li>
+			<script id="template-colaborador" type="x-tmpl-mustache">
+				{{#.}}
+					<li class="colaborador" data-colaborador="#detalhes_{{index}}" onclick="detalhes('#detalhes_{{index}}')">
+						<div class="avatar" style="background-image:url('{{colaborador.picture.large}}');"></div>
+						<ul class="resumo">
+							<li class="nome">{{colaborador.name.first}} {{colaborador.name.last}}</li>
+							<li class="cargo">{{colaborador.email}}</li>
+						</ul>
+						<ul class="atalhos">
+							<li><a href="mailto:{{colaborador.email}}" class="email">Enviar mensagem</a></li>
+							<li><a href="tel:{{colaborador.cell}}" class="telefone">Ligar</a></li>
+						</ul>
+					</li>
+				{{/.}}
+			</script>
 		</ul>
 
 	</div>
 
-	<div id="detalhes" class="oculto">
-		<div class="overlay">
+	<script id="template-detalhes" type="x-tmpl-mustache">
+		{{#.}}
+			<div id="detalhes_{{index}}" class="detalhes oculto">
+				<div class="overlay">
 
-				<div class="cartao">
-					<div class="header">
-						<a class="voltar" href="javascript:;">Voltar</a>
-						<h2 class="titulo">Wilbelison Junior</h2>
-					</div>
-					<div class="dados">
-						<div class="avatar" style="background-image:url('https://loremflickr.com/200/200/portrait?random=5');"></div>
-						<ul class="resumo">
-							<li class="nome">Wilbelison Junior</li>
-							<li class="cargo">Interaction Designer</li>
-						</ul>
-						<ul class="contatos">
-							<li class="email">
-								<a href="mailto:">
-									<dl>
-										<dt>E-mail</dt>
-										<dd>meustudio@gmail.com</dd>
-									</dl>
-								</a>
-							</li>
-							<li class="telefone">
-								<a href="tel:">
-									<dl>
-										<dt>Telefone</dt>
-										<dd>+55 11 98695 3010</dd>
-									</dl>
-								</a>
-							</li>
-							<li class="endereco">
-								<a href="https://maps.google.com/?q=lat,lng" target="_blank">
-									<dl>
-										<dt>Endereço</dt>
-										<dd>Rua forte do triunfo, 433, Apt 81A<br />08390-240, São Paulo,SP</dd>
-									</dl>
-								</a>
-							</li>
-						</ul>
-						<ul class="atalhos">
-							<li><a href="mailto:" class="email">Enviar mensagem</a></li>
-							<li><a href="tel:" class="telefone">Ligar</a></li>
-						</ul>
-					</div>
+						<div class="cartao" onclick="return false;">
+							<div class="header">
+								<a class="voltar" href="javascript:;" onclick="detalhes('#detalhes_{{index}}')">Voltar</a>
+								<h2 class="titulo">{{colaborador.name.first}} {{colaborador.name.last}}</h2>
+							</div>
+							<div class="dados">
+								<div class="avatar" style="background-image:url('{{colaborador.picture.large}}');"></div>
+								<ul class="resumo">
+									<li class="nome">{{colaborador.name.first}} {{colaborador.name.last}}</li>
+									<!-- <li class="cargo">{{colaborador.email}}</li> -->
+								</ul>
+								<ul class="contatos">
+									<li class="email">
+										<a href="mailto:">
+											<dl>
+												<dt>E-mail</dt>
+												<dd>{{colaborador.email}}</dd>
+											</dl>
+										</a>
+									</li>
+									<li class="telefone">
+										<a href="tel:">
+											<dl>
+												<dt>Telefone</dt>
+												<dd>{{colaborador.cell}}</dd>
+											</dl>
+										</a>
+									</li>
+									<li class="endereco">
+										<a href="https://maps.google.com/?q={{colaborador.location.coordinates.latitude}},{{colaborador.location.coordinates.longitude}}" target="_blank">
+											<dl>
+												<dt>Endereço</dt>
+												<dd>{{colaborador.location.street}}<br />{{colaborador.location.postcode}}, {{colaborador.location.city}} / {{colaborador.location.state}}</dd>
+											</dl>
+										</a>
+									</li>
+								</ul>
+								<ul class="atalhos">
+									<li><a href="mailto:{{colaborador.email}}" class="email">Enviar mensagem</a></li>
+									<li><a href="tel:{{colaborador.cell}}" class="telefone">Ligar</a></li>
+								</ul>
+							</div>
+						</div>
+
 				</div>
-
-		</div>
-	</div>
-
-	<script src="assets/js/acme.js"></script>
+			</div>
+		{{/.}}
+	</script>
 
 </body>
 </html>

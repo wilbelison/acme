@@ -189,10 +189,6 @@ ul {
 
 }
 
-#colaboradores {
-	margin-bottom: 20px;
-}
-
 #colaboradores > li {
 
 	display: block;
@@ -253,9 +249,6 @@ ul {
 
 	font-weight: bold;
 	font-size: 16px;
-
-	text-transform: capitalize;
-
 	color: #333333;
 
 }
@@ -352,8 +345,6 @@ ul {
 
 		padding: 0 40px;
 
-		margin-bottom: 40px;
-
 	}
 
 	#colaboradores > li,
@@ -403,14 +394,14 @@ ul {
 
 /* ---------- DETALHES ---------- */
 
-.detalhes.oculto {
+#detalhes.oculto {
 
 	display: none;
 	opacity: 0;
 
 }
 
-.detalhes .overlay {
+#detalhes .overlay {
 
 	position: fixed;
 
@@ -428,7 +419,7 @@ ul {
 
 }
 
-.detalhes .cartao {
+#detalhes .cartao {
 
 	position: relative;
 
@@ -439,7 +430,7 @@ ul {
 	
 }
 
-.detalhes .cartao .header {
+#detalhes .cartao .header {
 
 	position: fixed;
 	top: 0;
@@ -462,7 +453,7 @@ ul {
 
 }
 
-.detalhes .cartao .header .voltar {
+#detalhes .cartao .header .voltar {
 
 	float: left;
 
@@ -477,7 +468,7 @@ ul {
 	
 }
 
-.detalhes .cartao .header .titulo {
+#detalhes .cartao .header .titulo {
 
 	float: left;
 
@@ -492,23 +483,22 @@ ul {
 	font-weight: normal;
 	text-align: center;
 
-	text-transform: capitalize;
-
 	color: #fff;
 	
 }
 
-.detalhes .cartao .dados {
+#detalhes .cartao .dados {
 
 	padding: 20px;
 
 	height: calc(100% - 40px);
 
+
 	overflow-y: auto;
 	
 }
 
-.detalhes .cartao .dados .avatar {
+#detalhes .cartao .dados .avatar {
 
 	margin: 0 auto;
 
@@ -522,37 +512,35 @@ ul {
 	
 }
 
-.detalhes .cartao .dados .resumo {
+#detalhes .cartao .dados .resumo {
 
 	margin: 20px 0;
 	text-align: center;
 	
 }
 
-.detalhes .cartao .dados .resumo .nome {
+#detalhes .cartao .dados .resumo .nome {
 
 	font-weight: bold;
 	font-size: 24px;
 	color: #333333;
 
-	text-transform: capitalize;
-
 }
 
-.detalhes .cartao .dados .resumo .cargo {
+#detalhes .cartao .dados .resumo .cargo {
 
 	font-size: 14px;
 	color: #666666;
 
 }
 
-.detalhes .cartao .dados .contatos {
+#detalhes .cartao .dados .contatos {
 
 	width: 100%;
 
 }
 
-.detalhes .cartao .dados .contatos a {
+#detalhes .cartao .dados .contatos a {
 
 	font-size: 16px;
 	text-decoration: none;
@@ -561,7 +549,7 @@ ul {
 
 }
 
-.detalhes .cartao .dados .contatos dl {
+#detalhes .cartao .dados .contatos dl {
 
 	display: inline-block;
 
@@ -574,8 +562,8 @@ ul {
 }
 
 
-.detalhes .cartao .dados .contatos dt,
-.detalhes .cartao .dados .contatos dd {
+#detalhes .cartao .dados .contatos dt,
+#detalhes .cartao .dados .contatos dd {
 
 	display: inline-block;
 
@@ -586,13 +574,11 @@ ul {
 
 	word-wrap: break-word;
 
-	width: calc(100% - 34px);
-
-	text-transform: capitalize;
+	width: calc(100% - 34px)
 
 }
 
-.detalhes .cartao .dados .contatos dt {
+#detalhes .cartao .dados .contatos dt {
 
 	width: 24px;
 	height: 24px;
@@ -606,44 +592,40 @@ ul {
 
 }
 
-.detalhes .cartao .dados .contatos .email dt {
+#detalhes .cartao .dados .contatos .email dt {
 
 	background-image: url('assets/img/icone_detalhes_mensagem.svg?sanitize=true');
 
 }
 
-.detalhes .cartao .dados .contatos .email dd {
-	text-transform: initial;
-}
-
-.detalhes .cartao .dados .contatos .telefone dt {
+#detalhes .cartao .dados .contatos .telefone dt {
 
 	background-image: url('assets/img/icone_detalhes_telefone.svg?sanitize=true');
 
 }
 
-.detalhes .cartao .dados .contatos .endereco dt {
+#detalhes .cartao .dados .contatos .endereco dt {
 
 	height: 28px;
 	background-image: url('assets/img/icone_detalhes_endereco.svg?sanitize=true');
 
 }
 
-.detalhes .cartao .atalhos {
+#detalhes .cartao .atalhos {
 
 	margin-top: 10px;
 	height: 60px;
 
 }
 
-.detalhes .cartao .atalhos li {
+#detalhes .cartao .atalhos li {
 
 	float: left;
 	width: 50%;
 
 }
 
-.detalhes .cartao .atalhos a {
+#detalhes .cartao .atalhos a {
 
 	display: block;
 
@@ -659,12 +641,12 @@ ul {
 
 }
 
-.detalhes .cartao .atalhos a:hover {
+#detalhes .cartao .atalhos a:hover {
 	
 	transform: scale(1.1);
 }
 
-.detalhes .cartao .atalhos .email {
+#detalhes .cartao .atalhos .email {
 
 	margin-right: 10px;
 
@@ -677,7 +659,7 @@ ul {
 
 }
 
-.detalhes .cartao .atalhos .telefone {
+#detalhes .cartao .atalhos .telefone {
 
 	margin-left: 10px;
 
@@ -695,7 +677,7 @@ ul {
 @media only screen and (min-width: 480px) {
 
 
-	.detalhes .cartao {
+	#detalhes .cartao {
 
 		height: initial;
 
@@ -708,34 +690,34 @@ ul {
 		
 	}
 
-	.detalhes .cartao .header {
+	#detalhes .cartao .header {
 
 		position: absolute;
 		border-radius: 10px 10px 0 0;
 		
 	}
 
-	.detalhes .cartao .header .titulo {
+	#detalhes .cartao .header .titulo {
 
 		float: right;
 		
 	}
 
-	.detalhes .cartao .header .voltar {
+	#detalhes .cartao .header .voltar {
 
 		float: right;
 		background-image: url('assets/img/icone_header_fechar.svg?sanitize=true');
 		
 	}
 
-	.detalhes .cartao .header .voltar:hover {
+	#detalhes .cartao .header .voltar:hover {
 
 		transform: scale(1.1) rotate(90deg);
 		opacity: 1;
 		
 	}
 
-	.detalhes .cartao .dados {
+	#detalhes .cartao .dados {
 
 		display: block;
 		overflow-y: initial;
