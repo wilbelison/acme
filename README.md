@@ -1,10 +1,8 @@
 # Teste ACME
 
-## DEMO
-
 Uma solução simples para um problema simples ;)
 
-LINK: https://htmlpreview.github.io/?https://github.com/wilbelison/acme/blob/master/index.html
+*DEMO:* https://htmlpreview.github.io/?https://github.com/wilbelison/acme/blob/master/index.html
 
 ## Introdução
 
@@ -16,7 +14,7 @@ acabavam não se lembrando dos contatos de quem precisavam falar.
 A empresa ACME decidiu, então, desenvolver uma solução interna e a Diretoria espera que você faça
 uma apresentação e um protótipo de alta fidelidade com a sua proposta.
 
-##Desafio
+## Desafio
 
 Uma equipe de desenvolvedores da ACME já organizou um banco de dados e uma API foi criada no
 seguinte endpoint:
