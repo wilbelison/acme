@@ -29,7 +29,7 @@
 		<ul id="colaboradores">
 			<script id="template-colaborador" type="x-tmpl-mustache">
 				{{#.}}
-					<li class="colaborador" data-colaborador="#detalhes_{{index}}" onclick="detalhes('#detalhes_{{index}}')">
+					<li class="colaborador colaborador_{{index}}" onclick="detalhes('#detalhes_{{index}}')">
 						<div class="avatar" style="background-image:url('{{colaborador.picture.large}}');"></div>
 						<ul class="resumo">
 							<li class="nome">{{colaborador.name.first}} {{colaborador.name.last}}</li>

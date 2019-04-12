@@ -213,6 +213,12 @@ ul {
 
 }
 
+#colaboradores > li.oculto {
+
+	display: none;
+
+}
+
 #colaboradores .avatar {
 
 	float: left;

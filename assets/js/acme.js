@@ -22,7 +22,45 @@ $(document).ready(
 
 		$('#pesquisar').on('click', function() {
 			$('#query').focus();
+			filtrar(value);
 		});
+
+		var filtrar = function(query) {
+
+			if(query && query.length >= 1) {
+
+				query = query.toLowerCase();
+
+				$('.colaborador').addClass('oculto');
+
+				$('.detalhes').each(function (index, value) {
+
+					var nome = $(this).find('.nome');
+						nome = $(nome).html();
+
+					var contatos = $(this).find('.contatos');
+						contatos = $(contatos).html();
+					
+					var dados = $(nome).text() + $(contatos).text();
+						dados = dados.replace(/(\r\n|\n|\r)/gm,"");
+						dados = dados.replace(/  /g, '');
+						dados = dados.toLowerCase();
+						dados = dados.replace('telefone', '');
+						dados = dados.replace('endereço', '');
+
+					if(dados.search(query) != -1) {
+						$('.colaborador_' + index).removeClass('oculto');
+					}
+					
+				});
+
+			} else {
+
+				$('.colaborador').removeClass('oculto');
+
+			}
+
+		}
 
 		$('#query').on('input', function() {
 
@@ -45,7 +83,10 @@ $(document).ready(
 
 					$('#pesquisar').on('click', function() {
 						$('#query').focus();
+						filtrar();
 					});
+
+					filtrar();
 
 				});
 
@@ -55,9 +96,12 @@ $(document).ready(
 
 				$('#pesquisar').on('click', function() {
 					$('#query').focus();
+					filtrar(value);
 				});
 
 			}
+
+			filtrar(value);
 
 		});
 
