@@ -29,7 +29,7 @@ $(document).ready(
 
 			if(query && query.length >= 1) {
 
-				query = query.toLowerCase();
+				query = removeAcentos(query);
 
 				$('.colaborador').addClass('oculto');
 
@@ -44,7 +44,7 @@ $(document).ready(
 					var dados = $(nome).text() + $(contatos).text();
 						dados = dados.replace(/(\r\n|\n|\r)/gm,"");
 						dados = dados.replace(/  /g, '');
-						dados = dados.toLowerCase();
+						dados = removeAcentos(dados);
 						dados = dados.replace('telefone', '');
 						dados = dados.replace('endereço', '');
 
@@ -112,4 +112,17 @@ $(document).ready(
 
 var detalhes = function(id) {
 	$(id).toggleClass('oculto');
+}
+
+/* removedor de acentos */
+
+function removeAcentos (text) {       
+    text = text.toLowerCase();                                                         
+    text = text.replace(new RegExp('[ÁÀÂÃ]','gi'), 'a');
+    text = text.replace(new RegExp('[ÉÈÊ]','gi'), 'e');
+    text = text.replace(new RegExp('[ÍÌÎ]','gi'), 'i');
+    text = text.replace(new RegExp('[ÓÒÔÕ]','gi'), 'o');
+    text = text.replace(new RegExp('[ÚÙÛ]','gi'), 'u');
+    text = text.replace(new RegExp('[Ç]','gi'), 'c');
+    return text;                 
 }

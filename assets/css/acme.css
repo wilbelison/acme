@@ -191,6 +191,7 @@ ul {
 
 #colaboradores {
 	margin-bottom: 20px;
+	border-top: solid 1px #ddd;
 }
 
 #colaboradores > li {
@@ -198,18 +199,12 @@ ul {
 	display: block;
 
 	background-color: #fff;
-	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
 
 	height: 70px;
 	clear: both;
 
 	cursor: pointer;
-
-}
-
-#colaboradores > li:last-child {
-
-	border-bottom: solid 1px #ddd;
 
 }
 
@@ -360,11 +355,12 @@ ul {
 
 		margin-bottom: 40px;
 
+		border-top: none;
+
 	}
 
-	#colaboradores > li,
-	#colaboradores > li:last-child {
-		border-top: none;
+	#colaboradores > li {
+
 		border-bottom: none;
 	}
 
