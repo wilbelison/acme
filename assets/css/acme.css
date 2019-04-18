@@ -120,6 +120,8 @@ input:focus {
 	background-color: #fff;
 	color: #999;
 
+	text-overflow: ellipsis;
+
 }
 
 #query:focus {

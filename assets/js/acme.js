@@ -6,7 +6,7 @@ $(document).ready(
 		var templateColaboradores = $('#template-colaborador').html();
 		var templateDetalhes = $('#template-detalhes').html();
 
-		$.getJSON('https://randomuser.me/api/?results=10&nat=br&inc=info,picture,name,email,cell,location', function(data) {
+		$.getJSON('https://randomuser.me/api/' + resultados, function(data) {
 			
 			var view = data.results.map((e, i) => { return {colaborador: e, index: i} });
 
@@ -107,6 +107,11 @@ $(document).ready(
 
 	}
 );
+
+/* parametros padrões para a api */
+
+var search = window.location.search;
+var resultados = (search && search.length >= 3) ? (search) : ('?results=10&inc=info,picture,name,email,cell,location,nat');
 
 /* exibe e oculta detalhes */
 

@@ -22,7 +22,7 @@
 	<div class="wrapper">
 
 		<form id="busca">
-			<input id="query" name="query" type="text" placeholder="Pesquisar..." maxlength="32" />
+			<input id="query" name="query" type="text" placeholder="Pesquisar por nome, email, numero, cidade..." maxlength="32" />
 			<input id="pesquisar" name="pesquisar" type="button" value="Pesquisar" />
 		</form>
 
@@ -83,7 +83,7 @@
 										<a href="https://maps.google.com/?q={{colaborador.location.coordinates.latitude}},{{colaborador.location.coordinates.longitude}}" target="_blank">
 											<dl>
 												<dt>Endereço</dt>
-												<dd>{{colaborador.location.street}}<br />{{colaborador.location.postcode}}, {{colaborador.location.city}} / {{colaborador.location.state}}</dd>
+												<dd>{{colaborador.location.street}}<br />{{colaborador.location.postcode}}, {{colaborador.location.city}}, {{colaborador.location.state}}, {{colaborador.nat}}</dd>
 											</dl>
 										</a>
 									</li>
