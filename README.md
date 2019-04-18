@@ -2,11 +2,11 @@
 
 Uma solução simples para um problema simples ;)
 
-*DEMO:*
+**DEMO:**
 
 http://www.ux2.design/acme/
 
-*Exemplos com parametros personalizados da API:*
+**Exemplos com parametros personalizados da API:**
 
 http://www.ux2.design/acme/?results=50&nat=br
 
