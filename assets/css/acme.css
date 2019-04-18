@@ -510,6 +510,10 @@ ul {
 	height: calc(100% - 40px);
 
 	overflow-y: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	
 }
 
@@ -519,6 +523,7 @@ ul {
 
 	width: 200px;
 	height: 200px;
+	min-height: 200px;
 
 	background-position: center;
 	background-size: cover;
@@ -554,6 +559,7 @@ ul {
 .detalhes .cartao .dados .contatos {
 
 	width: 100%;
+	margin-bottom: 10px;
 
 }
 
@@ -636,7 +642,7 @@ ul {
 
 .detalhes .cartao .atalhos {
 
-	margin-top: 10px;
+	margin-top: auto;
 	height: 60px;
 
 }

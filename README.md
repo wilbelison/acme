@@ -2,7 +2,7 @@
 
 Uma solução simples para um problema simples ;)
 
-*DEMO:* https://ux2.000webhostapp.com/acme/
+*DEMO:* http://www.ux2.design/acme/
 
 ## Introdução
 
