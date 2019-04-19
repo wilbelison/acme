@@ -1,5 +1,9 @@
 /* ---------- GLOBAL ---------- */
 
+img[alt*=webhost] {
+	display:none;   
+}
+
 html, body {
 	height: calc(100% - 60px);
 	min-height: calc(100% - 60px);
