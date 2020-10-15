@@ -4,13 +4,13 @@ Uma solução simples para um problema simples ;)
 
 **DEMO:**
 
-http://www.ux2.design/acme/
+http://wil.work/demo/acme/
 
 **Exemplos com parametros personalizados da API:**
 
-http://www.ux2.design/acme/?results=50&nat=br
+http://wil.work/demo/acme/?results=50&nat=br
 
-http://www.ux2.design/acme/?results=100&nat=gb,us,es&gender=female
+http://wil.work/demo/acme/?results=100&nat=gb,us,es&gender=female
 
 ## Introdução
 
